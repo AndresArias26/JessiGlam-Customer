@@ -1,0 +1,153 @@
+/* Estios Generales */
+:root {
+  --primary: #c58f68;
+  --secondary: #333;
+  --bg-light: #fdfbf7;
+  --white: #fff;
+  --shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  --transition: all 0.3s ease;
+}
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Segoe UI", sans-serif;
+  color: var(--secondary);
+  background: var(--bg-light);
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--secondary);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Navegación */
+header {
+  background: var(--white);
+  padding: 1rem 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.logo-img {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  display: flex;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--secondary);
+  font-weight: bold;
+  &:hover {
+    color: var(--primary);
+    text-decoration: underline;
+    text-underline-offset: 8px;
+  }
+}
+
+.btn-reserva {
+  background-color: var(--primary);
+  color: var(--white);
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  transition: 0.3s;
+}
+
+.btn-reserva:hover {
+  background-color: #b08d55;
+}
+
+.hero {
+  background-color: var(--secondary);
+  background-image: url(images/pestañas.jpg);
+  background-size: cover;
+  background-position: 0 50%;
+  opacity: 90%;
+  position: relative;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  padding: 0 20px;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  color: var(--white);
+  margin-bottom: 10px;
+}
+
+.hero p {
+  color: var(--white);
+  font-size: 2rem;
+  margin-top: 10px;
+}
+
+.hero a {
+  font-size: 1.5rem;
+}
+/* Estilo del botón de WhatsApp */
+.btn-whatsapp {
+  position: fixed; /* Se mantiene fijo al hacer scroll */
+  bottom: 20px; /* Distancia desde abajo */
+  right: 20px; /* Distancia desde la derecha */
+  width: 60px;
+  height: 60px;
+  background-color: #25d366; /* Color oficial de WhatsApp */
+  color: white;
+  border-radius: 50%; /* Lo hace redondo */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Sombra elegante */
+  z-index: 1000; /* Asegura que esté siempre encima de todo */
+  transition: transform 0.3s ease; /* Animación suave */
+  animation: latido 2s infinite; /* Se repite infinitamente cada 2 segundos */
+}
+
+/* Efecto al pasar el mouse por encima */
+.btn-whatsapp:hover {
+  transform: scale(1.1); /* Crece un poquito */
+  background-color: #20b857; /* Verde un poco más oscuro */
+}
+
+/* 1. Definimos la animación */
+@keyframes latido {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+  }
+  70% {
+    transform: scale(1.05);
+    box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+  }
+}

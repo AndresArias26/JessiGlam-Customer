@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Estudio de Pestañas | Tu Nombre</title>
+    <style>
+      /* Estilos Generales */
+      :root {
+        --color-principal: #d4a373; /* Tono dorado/beige */
+        --color-fondo: #f9f7f2;
+        --texto-oscuro: #333;
+        --blanco: #fff;
+      }
+
+      body {
+        font-family: "Helvetica Neue", sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: var(--color-fondo);
+        color: var(--texto-oscuro);
+        line-height: 1.6;
+      }
+
+      h1,
+      h2,
+      h3 {
+        color: var(--texto-oscuro);
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+
+      /* Navegación */
+      header {
+        background: var(--blanco);
+        padding: 1rem 5%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+      }
+
+      nav ul {
+        list-style: none;
+        display: flex;
+        gap: 20px;
+      }
+      nav a {
+        text-decoration: none;
+        color: var(--texto-oscuro);
+        font-weight: bold;
+      }
+
+      .btn-reserva {
+        background-color: var(--color-principal);
+        color: var(--blanco);
+        padding: 10px 20px;
+        text-decoration: none;
+        border-radius: 25px;
+        transition: 0.3s;
+      }
+      .btn-reserva:hover {
+        background-color: #b08d55;
+      }
+
+      /* Hero Section */
+      .hero {
+        background-color: #eaddcf; /* Color temporal si no hay imagen */
+        /* background-image: url('tu-foto-pestañas.jpg'); USA UNA FOTO DE ALTA CALIDAD AQUI */
+        background-size: cover;
+        background-position: center;
+        height: 80vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        flex-direction: column;
+        padding: 0 20px;
+      }
+
+      .hero h1 {
+        font-size: 3rem;
+        margin-bottom: 10px;
+      }
+      .hero p {
+        font-size: 1.2rem;
+        margin-bottom: 30px;
+      }
+
+      /* Servicios */
+      .seccion {
+        padding: 4rem 10%;
+        text-align: center;
+      }
+      .grid-servicios {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+        margin-top: 2rem;
+      }
+      .tarjeta {
+        background: var(--blanco);
+        padding: 2rem;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+      }
+      .precio {
+        color: var(--color-principal);
+        font-weight: bold;
+        font-size: 1.2rem;
+        display: block;
+        margin-top: 10px;
+      }
+
+      /* Cuidados */
+      .cuidados {
+        background-color: var(--blanco);
+      }
+      .lista-cuidados {
+        text-align: left;
+        max-width: 600px;
+        margin: 0 auto;
+      }
+
+      /* Footer */
+      footer {
+        background-color: #333;
+        color: var(--blanco);
+        text-align: center;
+        padding: 2rem;
+      }
+
+      /* Responsive */
+      @media (max-width: 768px) {
+        .hero h1 {
+          font-size: 2rem;
+        }
+        nav ul {
+          display: none;
+        } /* En móvil simplificamos */
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h3>Tu Marca Beauty</h3>
+      <nav>
+        <ul>
+          <li><a href="#servicios">Servicios</a></li>
+          <li><a href="#cuidados">Cuidados</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+      <a href="#contacto" class="btn-reserva">Agendar Cita</a>
+    </header>
+
+    <section class="hero">
+      <h1>Despierta con una mirada perfecta</h1>
+      <p>Especialistas en extensiones de pestañas pelo a pelo y volumen.</p>
+      <a href="#contacto" class="btn-reserva">Quiero mis pestañas</a>
+    </section>
+
+    <section id="servicios" class="seccion">
+      <h2>Nuestros Estilos</h2>
+      <p>
+        Diseñamos la mirada ideal según la forma de tu ojo y tu gusto personal.
+      </p>
+
+      <div class="grid-servicios">
+        <div class="tarjeta">
+          <h3>Clásicas (1:1)</h3>
+          <p>
+            Efecto rímel natural. Se aplica una extensión por cada pestaña
+            natural.
+          </p>
+          <span class="precio">$XX.00</span>
+        </div>
+        <div class="tarjeta">
+          <h3>Híbridas</h3>
+          <p>
+            La combinación perfecta entre naturalidad y volumen. Mezcla de
+            clásicas y volumen.
+          </p>
+          <span class="precio">$XX.00</span>
+        </div>
+        <div class="tarjeta">
+          <h3>Volumen Ruso</h3>
+          <p>
+            Impacto total. Abanicos de pestañas ultra finas para una densidad
+            espectacular.
+          </p>
+          <span class="precio">$XX.00</span>
+        </div>
+        <div class="tarjeta">
+          <h3>Lifting de Pestañas</h3>
+          <p>
+            Tratamiento a tu pestaña natural para elevarla y curvarla sin
+            extensiones.
+          </p>
+          <span class="precio">$XX.00</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="cuidados" class="seccion cuidados">
+      <h2>Cuidados Posteriores</h2>
+      <p>
+        Para garantizar la retención de tus extensiones, sigue estos consejos:
+      </p>
+      <div class="lista-cuidados">
+        <ul>
+          <li>No mojar las pestañas durante las primeras 24 horas.</li>
+          <li>Evitar vapores, saunas y calor extremo.</li>
+          <li>
+            No usar rímel ni aceites desmaquillantes sobre las extensiones.
+          </li>
+          <li>Cepillarlas diariamente con el cepillo proporcionado.</li>
+          <li>Realizar tus retoques cada 2 o 3 semanas.</li>
+        </ul>
+      </div>
+    </section>
+
+    <footer id="contacto">
+      <h2>Agenda tu cita</h2>
+      <p>📍 Dirección del Estudio, Ciudad, País</p>
+      <p>📱 WhatsApp: +00 123 456 789</p>
+      <p>📸 Síguenos en Instagram: @tu_usuario</p>
+      <br />
+      <p>&copy; 2024 Tu Marca Beauty. Todos los derechos reservados.</p>
+    </footer>
+  </body>
+</html>

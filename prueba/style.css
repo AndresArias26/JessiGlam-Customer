@@ -1,0 +1,264 @@
+/* VARIABLES CSS: Cambia los colores aquí y se actualizan en toda la web */
+:root {
+  --primary: #c58f68; /* Color dorado/tierra */
+  --secondary: #333333; /* Color oscuro texto */
+  --bg-light: #fdfbf7; /* Fondo crema suave */
+  --white: #ffffff;
+  --shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  --transition: all 0.3s ease;
+}
+
+/* RESET BÁSICO */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Segoe UI", sans-serif;
+  color: var(--secondary);
+  background: var(--bg-light);
+  line-height: 1.6;
+}
+
+/* NAVBAR */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1.5rem 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: var(--transition);
+  z-index: 1000;
+}
+
+/* Efecto Glassmorphism al hacer scroll */
+header.scrolled {
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: var(--shadow);
+  padding: 1rem 5%;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+nav a {
+  text-decoration: none;
+  color: var(--secondary);
+  font-weight: 500;
+  transition: var(--transition);
+}
+nav a:hover {
+  color: var(--primary);
+}
+
+.btn-nav {
+  background: var(--secondary);
+  color: var(--white);
+  padding: 8px 20px;
+  border-radius: 20px;
+}
+.btn-nav:hover {
+  background: var(--primary);
+  color: var(--white);
+}
+
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* HERO SECTION */
+.hero {
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("https://images.unsplash.com/photo-1594464676189-32204c32b504?auto=format&fit=crop&w=1920&q=80");
+  background-size: cover;
+  background-position: center; /* Aquí aplicas lo que aprendimos antes */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--white);
+}
+.hero h1 {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+.resaltado {
+  color: var(--primary);
+  font-style: italic;
+}
+.hero-btns {
+  margin-top: 2rem;
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+.btn-primary,
+.btn-secondary {
+  padding: 12px 30px;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: bold;
+  transition: var(--transition);
+}
+.btn-primary {
+  background: var(--primary);
+  color: var(--white);
+}
+.btn-primary:hover {
+  background: #a6724e;
+  transform: translateY(-3px);
+}
+.btn-secondary {
+  background: transparent;
+  border: 2px solid var(--white);
+  color: var(--white);
+}
+.btn-secondary:hover {
+  background: var(--white);
+  color: var(--secondary);
+}
+
+/* SECCIONES */
+.seccion {
+  padding: 5rem 10%;
+}
+.bg-light {
+  background: #f3efe9;
+}
+.titulo-seccion {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+.titulo-seccion h2 {
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.linea-decorativa {
+  width: 60px;
+  height: 3px;
+  background: var(--primary);
+  margin: 10px auto;
+}
+
+/* CARDS SERVICIOS */
+.grid-servicios {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+.card {
+  background: var(--white);
+  padding: 2rem;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+  border-bottom: 3px solid transparent;
+}
+.card:hover {
+  transform: translateY(-10px);
+  border-bottom: 3px solid var(--primary);
+}
+.icono {
+  font-size: 2.5rem;
+  color: var(--primary);
+  margin-bottom: 1rem;
+}
+.precio {
+  display: block;
+  margin-top: 15px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--secondary);
+}
+
+/* GALERIA GRID */
+.galeria-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+}
+.galeria-grid img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: var(--transition);
+  cursor: pointer;
+}
+.galeria-grid img:hover {
+  transform: scale(1.03);
+  filter: brightness(1.1);
+}
+
+/* FOOTER */
+footer {
+  background: #222;
+  color: var(--white);
+  text-align: center;
+  padding: 3rem 0;
+}
+.sociales {
+  margin: 1.5rem 0;
+  font-size: 1.5rem;
+}
+.sociales a {
+  color: var(--white);
+  margin: 0 10px;
+  transition: var(--transition);
+}
+.sociales a:hover {
+  color: var(--primary);
+}
+
+/* RESPONSIVE (Móvil) */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+    color: var(--secondary);
+  }
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  /* Menú Móvil Oculto por defecto */
+  #nav-menu {
+    position: absolute;
+    top: 70px;
+    right: -100%; /* Fuera de la pantalla */
+    width: 100%;
+    background: var(--white);
+    flex-direction: column;
+    padding: 2rem;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    transition: 0.4s ease-in-out;
+  }
+  #nav-menu.active {
+    right: 0; /* Entra a la pantalla */
+  }
+  nav ul {
+    flex-direction: column;
+  }
+}
