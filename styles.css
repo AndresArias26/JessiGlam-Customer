@@ -185,6 +185,32 @@ nav a {
   color: var(--secondary);
 }
 
+/* FOOTER */
+footer {
+  background-color: #222;
+  color: var(--white);
+  text-align: center;
+  padding: 3rem 0;
+}
+
+.footer-content h3 {
+  color: var(--white);
+}
+
+.sociales {
+  margin: 1.5rem 0;
+  font-size: 1.5rem;
+}
+
+.sociales a {
+  color: var(--white);
+  margin: 0 10px;
+  transition: var(--transition);
+  &:hover {
+    color: var(--primary);
+  }
+}
+
 /* Estilo del botón de WhatsApp */
 .btn-whatsapp {
   position: fixed; /* Se mantiene fijo al hacer scroll */
