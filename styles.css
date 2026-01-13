@@ -77,12 +77,8 @@ nav a {
   color: var(--white);
   text-decoration: none;
   padding: 10px 20px;
-  margin: 0 auto;
   border-radius: 25px;
   transition: 0.3s;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
   max-width: fit-content;
 }
 
@@ -190,6 +186,26 @@ nav a {
   color: var(--secondary);
 }
 
+/* GALERIA GRID */
+.galeria-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+}
+
+.galeria-grid img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: var(--transition);
+  cursor: pointer;
+  &:hover {
+    transform: scale(1.03);
+    filter: brightness(1.1);
+  }
+}
+
 /* CONTACTO SECCION */
 /* Contenedor principal centrado */
 .contacto-centro {
@@ -270,6 +286,19 @@ nav a {
   font-size: 0.9rem;
   color: var(--primary);
   text-decoration: underline;
+}
+
+.accion-final .btn-reserva {
+  background-color: #25d366;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: fit-content;
+  &:hover {
+    background-color: #1ebc57;
+    transform: translateY(-10px);
+  }
 }
 
 /* FOOTER */
